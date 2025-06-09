@@ -1,0 +1,15 @@
+full_name:
+  - 'नाम'
+  - 'Name'
+gender:
+  - 'लिंग'
+  - 'Gender'
+dob:
+  - 'जन्मतिथि'
+  - 'DOB'
+birth_place:
+  - 'स्थान'
+  - 'Place of Birth'
+father_name:
+  - 'पिता का नाम'
+  - "Father's Name"

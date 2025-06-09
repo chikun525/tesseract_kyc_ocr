@@ -1,0 +1,5 @@
+# Ignore all files in test_images/
+test_images/*
+
+# But do not ignore the .gitkeep placeholder file
+!test_images/.gitkeep

@@ -82,9 +82,15 @@ def extract_address_from_back(ocr_text):
 
 
 def extract_fields(front_ocr, back_ocr):
-    # Aadhaar number
-    aadhaar_number = re.search(r'\b\d{4}\s?\d{4}\s?\d{4}\b', front_ocr)
-    aadhaar_number = aadhaar_number.group(0) if aadhaar_number else 'NA'
+    aadhaar_number = 'NA'
+    aadhaar_match_front = re.search(r'(\d{4}\s?\d{4}\s?\d{4})', front_ocr)
+    aadhaar_match_back = re.search(r'(\d{4}\s?\d{4}\s?\d{4})', back_ocr)
+
+    if aadhaar_match_front:
+        aadhaar_number = aadhaar_match_front.group(1)
+    elif aadhaar_match_back:
+        aadhaar_number = aadhaar_match_back.group(1)
+
 
     # Full name
     name = 'NA'
